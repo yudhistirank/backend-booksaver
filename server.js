@@ -15,6 +15,10 @@ app.use('/api/auth', authRoutes);
 app.use('/api/books', bookRoutes);
 app.use('/api/users', userRoutes);
 
+app.get('/', (req, res) => {
+  res.send('BookSave API Sudah Ready!');
+});
+
 // Koneksi ke MongoDB
 mongoose.connect(process.env.MONGODB_URI)
   .then(() => {
