@@ -1,5 +1,6 @@
 const Book = require('../models/Book');
 
+// Controller untuk mengelola buku
 exports.getBooks = async (req, res) => {
   const books = await Book.find();
   res.json(books);
@@ -21,5 +22,5 @@ exports.updateBook = async (req, res) => {
 exports.deleteBook = async (req, res) => {
   const { id } = req.params;
   await Book.findByIdAndDelete(id);
-  res.json({ message: 'Book deleted' });
+  res.json({ message: 'Buku telah dihapus', deletedBookId: id });
 };

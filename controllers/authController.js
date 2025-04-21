@@ -2,6 +2,7 @@ const User = require('../models/User');
 const bcrypt = require('bcryptjs');
 const { v4: uuidv4 } = require('uuid');
 
+// Controller untuk menangani registrasi dan login
 exports.register = async (req, res) => {
   const { email, password } = req.body;
   const hashed = await bcrypt.hash(password, 10);
