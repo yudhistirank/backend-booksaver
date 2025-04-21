@@ -13,17 +13,17 @@ exports.register = async (req, res) => {
     await user.save();
     res.status(201).json({ apiKey });
   } catch (err) {
-    res.status(400).json({ message: 'Email already used' });
+    res.status(400).json({ message: 'Email Sudah Terpakai' });
   }
 };
 
 exports.login = async (req, res) => {
   const { email, password } = req.body;
   const user = await User.findOne({ email });
-  if (!user) return res.status(400).json({ message: 'Invalid credentials' });
+  if (!user) return res.status(400).json({ message: 'Email atau Password Salah' });
 
   const match = await bcrypt.compare(password, user.password);
-  if (!match) return res.status(400).json({ message: 'Invalid credentials' });
+  if (!match) return res.status(400).json({ message: 'Email atau password Salah' });
 
   res.json({ apiKey: user.apiKey });
 };
