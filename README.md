@@ -4,6 +4,8 @@
 
 BookSaver API digunakan untuk mengelola data user dan buku. Mendukung registrasi, login, manajemen user, serta CRUD buku.
 
+Endpoint BookSaver : https://book-api-uts.vercel.app/
+
 ---
 
 ## 🔐 Auth Endpoints
