@@ -68,7 +68,7 @@ Menampilkan semua user.
         "_id": "680083728a965975b623b874",
         "email": "yudhistira@test.com",
         "password": "$2b$10$...",
-        "apiKey": "2e20087a-b9cc-4dc0-97e5-d546d44f56db",
+        "apiKey": "(apiKey)",
         "__v": 0
     }
 ]
@@ -95,7 +95,7 @@ Menghapus user berdasarkan ID.
         "_id": "680630a9da1a263bb0a0aaa1",
         "email": "yudis@test.com",
         "password": "$2b$10$...",
-        "apiKey": "9ab635cf-ae5e-4b0f-a721-6427b1a2f8b9",
+        "apiKey": "(apiKey)",
         "__v": 0
     }
 }
